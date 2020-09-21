@@ -91,3 +91,9 @@ def compute_cost(records):
         s = Stock(*rec)
         total += s.shares * s.price
     return total
+
+# 可以省略一个临时列表
+s = sum([x * x for x in nums])
+s = sum((x * x for x in nums)) # 显式的传递一个生成器表达式对象
+s = sum(x * x for x in nums) # 更加优雅的实现方式，省略了括号
+  
