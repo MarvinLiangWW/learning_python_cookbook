@@ -4,6 +4,36 @@
 from collections import Counter
 # most_common
 
+from collections import deque
+
+import heapq
+nums = [1, 8, 2, 23, 7, -4, 18, 23, 42, 37, 2]
+print(heapq.nlargest(3, nums)) # Prints [42, 37, 23]
+print(heapq.nsmallest(3, nums)) # Prints [-4, 1, 2]
+
+class PriorityQueue:
+    def __init__(self):
+        self._queue = []
+        self._index = 0
+
+    def push(self, item, priority):
+        heapq.heappush(self._queue, (-priority, self._index, item))
+        self._index += 1
+
+    def pop(self):
+        return heapq.heappop(self._queue)[-1]
+
+#我常用的写法    
+d = {}
+for key, value in pairs:
+    if key not in d:
+        d[key] = []
+    d[key].append(value)
+    
+# 可能会更优雅一点  
+d = defaultdict(list)
+for key, value in pairs:
+    d[key].append(value)
 
 # 没有理解的这个*号
 a = slice(5, 50, 2)
