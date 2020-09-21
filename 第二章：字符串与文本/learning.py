@@ -25,3 +25,6 @@ fnmatch('Dat45.csv', 'Dat[0-9]*')
 
 names = ['Dat1.csv', 'Dat2.csv', 'config.ini', 'foo.py']
 [name for name in names if fnmatch(name, 'Dat*.csv')]
+
+# fnmatch的匹配能力介于简单的字符串方法和强大的正则表达式之间
+# glob模块用于 文件名的匹配
