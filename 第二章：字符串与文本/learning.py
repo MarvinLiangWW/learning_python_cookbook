@@ -35,5 +35,5 @@ def clean_spaces(s):
     s = s.replace('\f', ' ')
     return s
 
-# replace函数的用处
+# 这种情况replace函数会比使用translate()或者正则表达式要快很多
 # 你需要执行任何复杂字符对字符的重新映射或者删除操作的话， translate() 方法会非常的快
