@@ -46,3 +46,5 @@ def sample():
     
 text = ''.join(sample())
 print(text)
+
+#看完了，但是有很多不会，需要抽空再看一遍，练习一下才行。
